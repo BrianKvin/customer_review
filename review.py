@@ -9,6 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Cityzen4@localhos
 db = SQLAlchemy(app)
 
 class Review(db.Model):
+    __tablename__ = 'customer_review_table'
     id = db.Column(db.Integer, primary_key=True)
     customer = db.Column(db.String(200))
     retailer = db.Column(db.String(200))
@@ -35,6 +36,8 @@ def submit():
             logo_url = url_for('static', filename='img/hive-logo.svg')
             return render_template('index.html', message='Please enter required fields', logo_url=logo_url)
         
+        
+
         review = Review(customer=customer, retailer=retailer, rating=rating, comments=comments)
         db.session.add(review)
         db.session.commit()
