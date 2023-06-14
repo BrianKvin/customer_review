@@ -21,7 +21,7 @@ class Review(db.Model):
 
 @app.route('/')
 def index():
-    logo_url = url_for('static', filename='img/hive-logo.svg')
+    logo_url = url_for('static', filename='img/cr.jpeg')
     return render_template('index.html', logo_url=logo_url)
 
 @app.route('/submit', methods=['POST'])
@@ -33,7 +33,7 @@ def submit():
         comments = request.form['comments']
         print(f"{customer}, {retailer}, {rating}, {comments}")
         if customer == '' or retailer == '':
-            logo_url = url_for('static', filename='img/hive-logo.svg')
+            logo_url = url_for('static', filename='img/cr.jpeg')
             return render_template('index.html', message='Please enter required fields', logo_url=logo_url)
         
         
@@ -42,7 +42,7 @@ def submit():
         db.session.add(review)
         db.session.commit()
         send_mail(customer, retailer, rating, comments)
-        logo_url = url_for('static', filename='img/hive-logo.svg')
+        logo_url = url_for('static', filename='img/cr.jpeg')
         return render_template('success.html', logo_url=logo_url)
 
 @app.route('/feedback')
