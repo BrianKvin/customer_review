@@ -1,20 +1,20 @@
 # Customer Review/Feedback Application
-![Customer Review Logo](https://www.123rf.com/photo_65580547_customer-reviews-icon-internet-button-on-white-background.html)
+![Customer Review Logo](https://previews.123rf.com/images/valentint/valentint1610/valentint161004490/65580547-customer-reviews-icon-internet-button-on-white-background.jpg)
 
 > This Flask application allows customers to review retailers, send the data to PostgreSQL and email retailers.
 ## Installing depenencies
-> pip -V or pip --version
-> Install pip * ***python3 get-pip.py***
-> Upgrade pip + ***pip install --upgrade pip setuptools***
-> Set up a virtual environment + ***python3 -m venv venv***
-> Activate the virtual environment * ***source venv/bin/activate***
-> Install Flask - ***pip install Flask***
-> Install Flask SQLAlchemy + ***pip install -U Flask-SQLAlchemy***
-> Install PostgreSQL - ***sudo apt install postgresql***
-> Start postgresql + ***sudo service postgresql start***
-> Install psycopg2 - ***pip install psycopg2***
-> Interact with database with postgresql + ***export FLASK_APP=review***
-> Access interactive mode with PostgreSQL - ***flask shell***
+- pip -V or pip --version
+- Install pip ***python3 get-pip.py***
+- Upgrade pip ***pip install --upgrade pip setuptools***
+- Set up a virtual environment ***python3 -m venv venv***
+- Activate the virtual environment ***source venv/bin/activate***
+- Install Flask ***pip install Flask***
+- Install Flask SQLAlchemy ***pip install -U Flask-SQLAlchemy***
+- Install PostgreSQL ***sudo apt install postgresql***
+- Start postgresql ***sudo service postgresql start***
+- Install psycopg2 ***pip install psycopg2***
+- Interact with database with postgresql ***export FLASK_APP=review***
+- Access interactive mode with PostgreSQL ***flask shell***
 
 ## Resources
 1. [SQLAlchemy ORM Tutorial for Python Developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
